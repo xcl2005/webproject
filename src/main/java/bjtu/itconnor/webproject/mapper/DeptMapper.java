@@ -21,6 +21,6 @@ public interface DeptMapper {
         // 错误写成update_time=#{update_time} 导致BuG Fixed on3/23/2025
     void updateById(Dept dept);
 
-    @Select("select name,create_time,update_time from dept where id = #{id}")
+    @Select("select id,name,create_time,update_time from dept where id = #{id}")
     Dept findById(Integer id);
 }
